@@ -1,0 +1,52 @@
+
+<h1 class="dialog" id="dialog1" mat-dialog-title>Irasas</h1>
+<form [formGroup]="Reactiveform" (ngSubmit)="SaveIrasas()">
+    <div mat-dialog-content>
+    
+    <fieldset class="data-form" [disabled]="true">
+        <mat-form-field>
+            <mat-label>Id (autoset)</mat-label>
+            <input placeholder="Id (auto set)" matInput formControlName="id">
+        </mat-form-field>
+    </fieldset>
+    
+    <fieldset class="data-form" [disabled]="true">
+        <mat-form-field>
+            <mat-label>Data (autoset)</mat-label>
+            <input placeholder="Data" matInput formControlName="data">
+            
+        </mat-form-field>
+    </fieldset>
+    
+    <fieldset>
+        <mat-form-field>
+            <mat-label>Suma</mat-label>
+            <input placeholder="Suma" matInput formControlName="suma">
+        </mat-form-field>
+    </fieldset>
+
+    <fieldset>
+        <mat-form-field>
+            <mat-label>Kategorija</mat-label>
+            <input placeholder="Kategorija" matInput formControlName="kategorija">
+        </mat-form-field>
+    </fieldset>
+
+    <fieldset>
+        <mat-form-field>
+            <mat-label>Tipas</mat-label>
+            <mat-select formControlName="tipas">
+                <mat-option *ngFor="let item of options" [value]="item.name">
+                    {{item.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </fieldset>
+          
+    </div>
+    
+    <div mat-dialog-actions>
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Save</button>
+    </div>
+</form>
