@@ -1,7 +1,7 @@
 export interface Irasas {
     id: number;
-    suma: number;
     data: Date;
+    suma: number;
     kategorija: string;
     tipas: string;
 

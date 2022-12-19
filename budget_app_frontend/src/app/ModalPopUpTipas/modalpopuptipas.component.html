@@ -1,0 +1,26 @@
+
+<h2 class="dialog2" mat-dialog-title>Tipas</h2>
+<form [formGroup]="Reactiveform2" (ngSubmit)="SaveTipas()">
+    <div mat-dialog-content>
+    
+    <fieldset class="data-form" [disabled]="true">
+        <mat-form-field>
+            <mat-label>Id (autoset)</mat-label>
+            <input placeholder="Id (auto set)" matInput formControlName="id">
+        </mat-form-field>
+    </fieldset>
+
+    <fieldset>
+        <mat-form-field>
+            <mat-label>Tipas</mat-label>
+            <input placeholder="Tipas" matInput formControlName="tipasStr">
+        </mat-form-field>
+    </fieldset>
+    
+    </div>
+    
+    <div mat-dialog-actions>
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Save</button>
+    </div>
+</form>

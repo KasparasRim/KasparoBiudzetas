@@ -9,6 +9,9 @@ import { MatDialogModule } from "@angular/material/dialog"
 import { MatSelectModule } from "@angular/material/select"
 import { MatRadioModule } from "@angular/material/radio"
 import { MatCheckboxModule } from "@angular/material/checkbox"
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
     exports:[
@@ -21,7 +24,10 @@ import { MatCheckboxModule } from "@angular/material/checkbox"
         MatDialogModule,
         MatSelectModule,
         MatRadioModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatCardModule
 
     ]
 })
