@@ -1,14 +1,3 @@
-<!-- Pasikelti kokią db valdymo sistemą, pvz. mysql, postrgres ar kitą, 
-mes labai norėtume, kad ji būtų "sql-based", sukurti .sql failą, 
-kuriame būtų aprašyta tavo db ir lentelė arba lentelės.
-
-Sukurti Spring boot projektą, čia turėtų būti interakcija su duombaze, 
-norėtume, kad panaudotum spring'o repozitorijas, entity, controllers, 
-tavo spring'o endpont'uose turėtų atsispindėti CRUD veiksmai su tavo duombaze. 
-Angular 2+, čia naudojant endpoint'us iš spring'o būtų galima atlikti CRUD operacijas 
-ir matyti rezultatą, norėtume, kad panaudotum ne tik patį Angular 2+, tačiau ir vieną 
-iš bibliotekų, pvz. bootstrap, material ui arba Primeng. -->
-
 # BudgetApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
