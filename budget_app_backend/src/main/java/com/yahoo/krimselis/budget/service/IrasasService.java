@@ -27,19 +27,19 @@ public class IrasasService {
         return irasasRepo.findAll();
     }
 
-    public double balansas() {
-        List <Irasas> irasuSarasas = new ArrayList<>(irasasRepo.findAll());
-
-        double balansas = 0;
-        for (Irasas irasas : irasuSarasas) {
-            if (irasas.getTipas().equalsIgnoreCase("pajamos")) {
-                balansas += irasas.getSuma();
-            } else  {
-                balansas -= irasas.getSuma();
-            }
-        }
-        return balansas;
-    }
+//    public double balansas() {
+//        List <Irasas> irasuSarasas = new ArrayList<>(irasasRepo.findAll());
+//
+//        double balansas = 0;
+//        for (Irasas irasas : irasuSarasas) {
+//            if (irasas.getIrasas().getTipas().equalsIgnoreCase("pajamos")) {
+//                balansas += irasas.getSuma();
+//            } else  {
+//                balansas -= irasas.getSuma();
+//            }
+//        }
+//        return balansas;
+//    }
 
     @Transactional
     public Irasas updateIrasas(Irasas irasas) {
@@ -50,6 +50,7 @@ public class IrasasService {
                 .orElseThrow(() -> new UserNotFoundException("Irasas pagal id " + id + " nerastas"));
     }
     public void deleteIrasas (Long id) {
+        irasasRepo.deleteById(id);
         irasasRepo.deleteIrasasById(id);
     }
 

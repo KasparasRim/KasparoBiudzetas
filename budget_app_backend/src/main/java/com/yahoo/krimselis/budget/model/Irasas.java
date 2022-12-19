@@ -8,13 +8,15 @@ import java.time.LocalDateTime;
 public class Irasas implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
-    @Column(nullable = false, updatable = true)
+   @Column(nullable = false, updatable = true)
     private Long id;
     private Double suma; // Ateityje BIGDECIMAL
     private LocalDateTime data;
     private String kategorija;
+//    @OneToOne
+//    @MapsId
     private String tipas;
+
     public Irasas() {};
 
     public Irasas(Long id, Double suma, LocalDateTime data, String kategorija, String tipas) {
